@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gomoku Web</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Gomoku Web</h1>
+    </header>
+
+    <main class="layout">
+      <section class="board-section">
+        <div class="board-wrapper">
+          <canvas id="board" width="600" height="600" aria-label="Gomoku board"></canvas>
+          <noscript>需要启用 JavaScript 才能运行游戏。</noscript>
+        </div>
+      </section>
+
+      <aside class="controls" aria-label="控制面板">
+        <div class="control-row">
+          <label for="firstPlayer">先手：</label>
+          <select id="firstPlayer">
+            <option value="human">玩家</option>
+            <option value="ai">AI</option>
+          </select>
+        </div>
+
+        <div class="control-row">
+          <button id="btnUndo" disabled>悔棋</button>
+          <button id="btnRestart">重开</button>
+        </div>
+
+        <div class="control-row">
+          <button id="btnHint">提示</button>
+          <label class="toggle">
+            <input type="checkbox" id="toggleSound" checked />
+            <span>音效</span>
+          </label>
+        </div>
+
+        <div class="status" id="status">准备就绪</div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <small>
+        占位版本 · 后续将逐步实现游戏逻辑与 AI
+        · 项目仓库：
+        <a href="https://github.com/your-username/gomoku-web" target="_blank" rel="noopener noreferrer">your-username/gomoku-web</a>
+      </small>
+    </footer>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
