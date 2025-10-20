@@ -1,0 +1,51 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  color: #222;
+  background: #fafafa;
+}
+.page {
+  max-width: 720px;
+  margin: 24px auto 48px;
+  padding: 0 16px;
+}
+.title { font-size: 18px; font-weight: 600; margin: 0 0 12px; }
+
+.board-container {
+  width: 100%;
+  /* 让画布总是正方形：通过设置 canvas 的宽高属性为相等，配合 width: 100% 实现自适应 */
+  /* 此处容器仅负责提供宽度限制 */
+}
+
+canvas#board {
+  display: block;
+  width: 100%;
+  height: auto; /* 由画布 width/height 属性比值决定高度，确保正方形 */
+  background: #f6e3b4; /* 浅木色背景 */
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  touch-action: none; /* 阻止触控滚动影响绘制 */
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+.controls button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+.controls button:hover {
+  background: #f2f2f2;
+}
+.turn { color: #444; font-size: 14px; }
+.hint { color: #666; font-size: 13px; }

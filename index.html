@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>15×15 棋盘（Canvas，高 DPI）</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <h1 class="title">15×15 棋盘（Canvas，高 DPI）</h1>
+    <div id="board-container" class="board-container">
+      <canvas id="board"></canvas>
+    </div>
+    <div class="controls">
+      <button id="resetBtn" type="button">重置</button>
+      <span class="turn" id="turnLabel">当前：黑棋</span>
+    </div>
+    <p class="hint">提示：桌面端可悬停预览落点；移动端轻触落子。支持高 DPI 渲染与准确坐标映射。</p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
