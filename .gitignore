@@ -1,0 +1,17 @@
+# General
+.DS_Store
+*.log
+*.tmp
+*.temp
+
+# Node
+node_modules/
+dist/
+build/
+.cache/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>基础对弈 - 五子棋 Demo</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">五子棋 Demo</div>
+      <div class="controls">
+        <div class="control-group">
+          <label>先手：</label>
+          <label class="radio">
+            <input type="radio" name="firstPlayer" value="black" checked /> 黑
+          </label>
+          <label class="radio">
+            <input type="radio" name="firstPlayer" value="white" /> 白
+          </label>
+        </div>
+        <button id="btn-start" class="btn primary">开始</button>
+        <button id="btn-restart" class="btn">重开</button>
+        <button id="btn-undo" class="btn">悔棋</button>
+        <button id="btn-hint" class="btn">提示</button>
+        <button id="btn-sound" class="btn sound">🔊 声音开</button>
+        <div id="turn-indicator" class="turn">当前回合：<span class="dot black"></span><span class="label">黑</span></div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="board-wrap">
+        <canvas id="board" width="600" height="600"></canvas>
+      </div>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="overlay-unlock" class="overlay hidden">
+      <div class="overlay-content">
+        <div class="title">点击屏幕以解锁音频</div>
+        <div class="sub">移动端需要首次交互才能播放声音</div>
+        <button id="btn-unlock" class="btn primary">好的</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
