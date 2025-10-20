@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>五子棋 - 状态与规则演示</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>五子棋</h1>
+    <div class="controls">
+      <button id="undoBtn">悔棋（撤销玩家+AI）</button>
+      <button id="restartBtn">重开</button>
+      <label class="ai-toggle">
+        <input type="checkbox" id="aiToggle" checked />
+        启用AI对手
+      </label>
+    </div>
+
+    <div class="status">
+      <span id="turnLabel">当前方：黑</span>
+      <span id="moveCount">步数：0</span>
+      <span id="winnerLabel" class="winner"></span>
+    </div>
+
+    <canvas id="board" width="640" height="640"></canvas>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
